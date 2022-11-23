@@ -32,16 +32,15 @@ function Register() {
             </Breadcrumb.Item>
           </Breadcrumb>
 
-          <Card.Title className='Login-Title'>Masuk</Card.Title>
+          <Card.Title className='Login-Title'>Daftar</Card.Title>
           <Card.Subtitle className='Login-Subtitle'>
-            Jika Anda sudah Terdaftar Maka Anda bisa Masuk dengan email dan
-            Password
+            Daftar Akun terlebih dahulu agar bisa lanjut
           </Card.Subtitle>
 
           <Form className='Form'>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Email addresns</Form.Label>
-              <Form.Control type='email' placeholder='Enter email' />
+              <Form.Label>Nama Lengkap</Form.Label>
+              <Form.Control type='email' placeholder='Masukan Nama Lengkap' />
               <Form.Text className='text-muted'>
                 We'll never share your email with anyone else.
               </Form.Text>
@@ -51,16 +50,19 @@ function Register() {
               <Form.Label>Password</Form.Label>
               <Form.Control type='password' placeholder='Password' />
             </Form.Group>
-            <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-              <Form.Check type='checkbox' label='Check me out' />
-              <a href='/' className='forget'>
-                Lupa Password?
-              </a>
+            <Form.Group className='mb-3' controlId='formBasicPassword'>
+              <Form.Label>Masukan Ulang Password</Form.Label>
+              <Form.Control type='password' placeholder=' Masukan Ulang Password' />
             </Form.Group>
-            <Button className='Login-btn'>Masuk</Button>
-            <a href='/Signup' className='Daftar'>
-              Belum Memiliki Akun? Daftar
+            <Form.Group className='mb-3' controlId='formBasicCheckbox'>
+              <Form.Check type='checkbox' label='Remember me' />
+            </Form.Group>
+            <div className="sub">
+              <button>Masuk</button>
+              <a href='/Signup' className='Daftar'>
+              Sudah Punya akun? Masuk
             </a>
+            </div>
           </Form>
         </Card.Body>
       </Card>
