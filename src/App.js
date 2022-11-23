@@ -10,9 +10,9 @@ import Login from "./Pages/Login";
 import Register from "./Pages/Register";
 import Home from "./Pages/Home";
 import Bantuan from "./Pages/Bantuan";
-import DetailBantuan from './Pages/detail_bantuan'
-import StatusBantuan from './Pages/status_bantuan'
-import LengkapiDokumen from './Pages/lengkapi_dokumen'
+import DetailBantuan from './Pages/DetailBantuan'
+import StatusBantuan from './Pages/StatusBantuan'
+import LengkapiDokumen from './Pages/LengkapiDokumen'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -24,12 +24,11 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Bantuan' element={<Bantuan />} />
-        <Route path='/detail_bantuan' element={<DetailBantuan />} />
-        <Route path='/lengkapi_dokumen' element={<LengkapiDokumen />} />
+        <Route path='/DetailBantuan' element={<DetailBantuan />} />
+        <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Register' element={<Register />}/>
-        <Route path='/status_bantuan' element={<StatusBantuan />} />
-
+        <Route path='/StatusBantuan' element={<StatusBantuan />} />
       </Routes>
 
       <Footer />

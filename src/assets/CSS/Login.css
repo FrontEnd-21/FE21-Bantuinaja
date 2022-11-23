@@ -32,8 +32,9 @@
 }
 
 .Login-btn {
+
    border-radius: 20px;
-   width: 600px;
+   width: 700px;
  margin-left: 50px;
  border-color: beige;
  margin-bottom: 20px;
@@ -42,7 +43,22 @@
 .Daftar{
     color: gray;
     text-decoration: none;
-    margin-left:  15rem; 
+    text-align: center;
+}
+.sub {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
+.sub button {
+    background-color: #f27c36;
+    height: 50px;
+    border-radius: 10px;
+}
+.sub button:hover {
+    background-color: #003F7E;
+    transition: 0.5s ease-in-out;
+    color: #fff;
+}
 

@@ -8,7 +8,7 @@ import imglogin from "../assets/IMAGE/Login.svg";
 
 // Bootstrap
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
+
 import Form from "react-bootstrap/Form";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
 import BreadcrumbItem from "react-bootstrap/esm/BreadcrumbItem";
@@ -43,7 +43,7 @@ function Login() {
               <Form.Label>Email address</Form.Label>
               <Form.Control type='email' placeholder='Enter email' />
               <Form.Text className='text-muted'>
-                We'll never share your email with anyone else.
+                Kami Tidak akan menyebarkan Informasi tentang anda.
               </Form.Text>
             </Form.Group>
 
@@ -52,15 +52,17 @@ function Login() {
               <Form.Control type='password' placeholder='Password' />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-              <Form.Check type='checkbox' label='Check me out' />
+              <Form.Check type='checkbox' label='Ingat Saya' />
               <a href='/' className='forget'>
                 Lupa Password?
               </a>
             </Form.Group>
-            <Button className='Login-btn'>Masuk</Button>
-            <a href='/Signup' className='Daftar'>
-              Belum Memiliki Akun? Daftar
-            </a>
+            <div className="sub">
+              <button>Masuk</button>
+              <a href='/Signup' className='Daftar'>
+                Belum Memiliki Akun? Daftar
+              </a>
+            </div>
           </Form>
         </Card.Body>
       </Card>
