@@ -1,0 +1,42 @@
+.Blue-body {
+  margin: 25rem 0 10rem ;
+  background-color: #003f7e;
+  border-radius: 100px 0px;
+}
+
+.Wrap-context{
+  padding: 70px;
+}
+
+.h2 {
+  color: #f27c36;
+  text-align: center;
+  margin-bottom: 2.5rem;
+}
+
+.h3 {
+display: flex;
+}
+
+.h3 h3{
+  margin-left: 30px;
+  color: white;
+  font-weight: 200;
+  }
+
+.h3 .h3-icons{
+  font-size: 20px;
+  color: #f27c36;
+  margin: 6px;
+}
+
+.context{
+  font-size: 20px;
+  text-align: left;
+  margin: 0 25px;
+  color: white;
+  font-weight: 200;
+  line-height: 40px;
+}
+
+

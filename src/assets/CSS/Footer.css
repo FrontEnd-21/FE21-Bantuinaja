@@ -1,0 +1,60 @@
+.Footer {
+    margin-top: 10rem;
+   
+}
+
+.Wrap-Footer{
+    background-color: black;
+    display: flex;
+}
+
+.Footer-img {
+   max-width: 250px;
+   margin: 70px 10px;
+}
+
+.Footer-Address {
+    display: flex;
+    flex-direction: column;
+    margin-top: 2.5rem;
+    margin-right: 1rem ;
+}
+
+.Address-Title h3{
+    color: white;
+    font-size: 35px;
+    line-height: 50px;
+    font-weight: 350;
+}
+
+.Address-Map .map{
+    color: white;
+    margin-right: 130px;
+    font-weight: 300;
+    line-height: 30px;
+}
+
+.Sosial{
+    margin-top: 3rem;
+    margin-right: 5rem ;
+}
+.Sosial ul {
+    display: flex;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.Sosial ul li {
+    font-size: 35px;
+    margin-left: 50px;
+    list-style: none;
+    color: white;
+} 
+
+.cp{
+    position: absolute;
+    bottom: 1rem;
+    left: 35rem;
+}
+

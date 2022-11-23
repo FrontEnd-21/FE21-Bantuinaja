@@ -1,0 +1,200 @@
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+.container{
+    
+    width: 100%;
+    margin: 50px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+}
+.left {
+    margin-left: -70px;
+}
+.right {
+    margin-left: -100px;
+}
+.back {
+    text-decoration: none;
+    display: flex;
+    justify-content: start;
+    align-items: center;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-bottom: 20px;
+}
+.back a {
+    text-decoration: none ;
+    color: #8692A6 ;
+}
+.back a:hover{
+    transform: translateX(10px);
+    transition: 0.4s ease-in-out;
+    color: #F27C36;
+}
+.container > div {
+    padding: 100px;
+}
+.right a {
+    text-decoration: none;
+}
+form {
+    font-family : Arial, Helvetica, sans-serif;
+  
+}
+form p{
+    color: #8692A6;
+}
+form p a {
+    color: #8692A6;
+}
+form p a:hover{
+    color: #F27C36;
+    transition: 0.5s ease-out;
+}
+form #Masuk{
+    margin-top: 50px;
+    width: 100%;
+    height: 40px;
+    background-color: #F27C36;
+    border-radius: 20px ;
+    outline: none;
+    border: none;
+    color: #ffff;
+    font-family : Arial, Helvetica, sans-serif;
+    margin-bottom: 30px;
+    font-size: 17px;
+    font-weight: 500;
+}
+form #Masuk:hover{
+    background-color: #003F7E;
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+}
+form .heading { 
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 78%;   
+    
+}
+form .heading h3 {
+    font-size: 15px;
+    margin-top: -5px ;
+}
+form > .input  {
+    margin-top: 10px;
+    font-size: 20px;
+    display:grid; 
+    width: 100%;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #8692A6;
+}
+.input > label {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-weight: 500;
+    font-size: 15px;
+}
+.input > input {
+    height: 40px;
+    margin: 10px 0 14px 0;
+    padding-left: 10px;
+    width: 97%;
+    border: 1px solid #8692A6;
+    border-radius: 10px;
+    outline: none;
+}
+.input > input:focus{
+    border: 1px solid#F27C36;
+}
+form .remember {
+    display: flex;
+    justify-content: space-between;
+    color :#8692A6;
+}
+form .remember a{
+    color: #8692A6;
+}
+form .remember a:hover{
+    color: #F27C36;
+    transition: 0.5s ease-in-out;
+}
+.remember span input {
+    cursor: pointer;
+}
+.remember span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+p { 
+    text-align:  center;
+}
+
+@media (max-width: 1600px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        display: none;
+    }
+}
+
+
+@media (max-width: 1024px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        display: none;
+    }
+}
+@media (max-width: 800px){
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
+    .left{
+        display: none;
+    }
+    form .heading { 
+      
+        width: 100%;
+   
+        
+    }
+}
+@media (max-width: 412px){
+    .container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+    .left{
+        display: none;
+    }
+    form .heading { 
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+        border: 1px solid;   
+        
+    }
+    form .heading h3{
+        font-size: 13px;
+    }
+}

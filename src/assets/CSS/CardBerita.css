@@ -1,0 +1,40 @@
+.Gray-box{
+  background-color: gray;
+  border-radius: 2px;
+}
+
+.White-box{
+  margin: 3rem 8rem ;
+  border-radius: 20px;
+  background-color: white;
+}
+
+.News-Title{
+  text-align: center;
+  padding: 20px;
+  text-transform: uppercase;
+}
+
+.Context{
+  font-size: 22px;
+  text-align: left;
+  padding: 10px;
+  margin: 0 30px ;
+}
+
+.Platfrom{
+  font-size:  30px;
+  float: left;
+  margin: 0  5rem 15px;
+}
+
+.Platfrom span{
+  font-weight: 400;
+  margin: 3px 0 0 10px;
+}
+
+
+
+.Platfrom span{
+  font-size: 18px;
+}

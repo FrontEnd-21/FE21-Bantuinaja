@@ -1,0 +1,25 @@
+.nav-color {
+    background: #f8f8f8;
+    height: 100px;
+}
+.conts {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    width: 80%;
+
+    position: relative;
+    
+}
+
+.ms-auto{
+    font-size: 20px;
+}
+
+.ms-auto > .nav-link:hover {
+    font-size: 19px;
+    transition: all 0.4s;
+    color: #003F7E;
+    text-decoration: underline 3px #f27c36;
+}
