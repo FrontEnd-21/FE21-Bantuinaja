@@ -8,7 +8,6 @@
     align-items: center;
     margin: 0 auto;
     width: 80%;
-
     position: relative;
     
 }
@@ -36,7 +35,7 @@
     background-color: #f27c36;
     transition: 0.2s ;
     text-decoration: none;
-    font-weight: 200;
-    color: white;
+    font-weight: 400;
+    color:black;
 }
 
