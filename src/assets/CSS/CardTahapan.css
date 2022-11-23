@@ -16,6 +16,7 @@
 .Wrap-Step{
   align-items: center;
   justify-content: center;
+  text-align: center;
   display: flex;
   gap: 7.5rem;
 }

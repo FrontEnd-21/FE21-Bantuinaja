@@ -9,9 +9,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Login from "./Pages/Login";
 import Home from "./Pages/Home";
 import Bantuan from "./Pages/Bantuan";
-import DetailBantuan from "./Pages/DetailBantuan";
-import LengkapiDokumen from "./Pages/LengkapiDokumen";
-import StatusBantuan from "./Pages/StatusBantuan";
+import DetailBantuan from './Pages/detail_bantuan'
+import StatusBantuan from './Pages/status_bantuan'
+import LengkapiDokumen from './Pages/lengkapi_dokumen'
 
 function App() {
   const [count, setCount] = useState(0);
@@ -23,10 +23,10 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/Bantuan' element={<Bantuan />} />
-        <Route path='/DetailBantuan' element={<DetailBantuan />} />
-        <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
+        <Route path='/detail_bantuan' element={<DetailBantuan />} />
+        <Route path='/lengkapi_dokumen' element={<LengkapiDokumen />} />
         <Route path='/Login' element={<Login />} />
-        <Route path='/StatusBantuan' element={<StatusBantuan />} />
+        <Route path='/status_bantuan' element={<StatusBantuan />} />
       </Routes>
 
       <Footer />

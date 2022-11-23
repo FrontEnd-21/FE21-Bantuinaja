@@ -26,15 +26,9 @@ function NavBar() {
                 <Nav.Link as={Link} to={"/Bantuan"} className='nav-link'>
                   Bantuan
                 </Nav.Link>
-                <NavDropdown title='User' id='basic-nav-dropdown'>
-                  <NavDropdown.Item href='#action/3.1'>
-                    Profile
-                  </NavDropdown.Item>
-                  <NavDropdown.Item href='#action/3.2'>SignUp</NavDropdown.Item>
-                  <NavDropdown.Item href='#action/3.3'>
-                    Logout
-                  </NavDropdown.Item>
-                </NavDropdown>
+                <Nav.Link as={Link} to={"/Login"} className='nav-link login'>
+                  Login
+                </Nav.Link>
               </Nav>
             </Navbar.Collapse>
           </div>
