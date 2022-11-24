@@ -40,8 +40,8 @@ function Login() {
 
           <Form className='Form'>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Email address</Form.Label>
-              <Form.Control type='email' placeholder='Enter email' />
+              <Form.Label>Alamat Email</Form.Label>
+              <Form.Control type='email' placeholder='Masukan Email' />
               <Form.Text className='text-muted'>
                 Kami Tidak akan menyebarkan Informasi tentang anda.
               </Form.Text>
@@ -57,7 +57,7 @@ function Login() {
                 Lupa Password?
               </a>
             </Form.Group>
-            <div className="sub">
+            <div className='sub'>
               <button>Masuk</button>
               <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar

@@ -1,18 +1,28 @@
 import React from "react";
+
+// Image
 import logo from "../assets/IMAGE/logo.svg";
-import { FaRegUserCircle } from "react-icons/fa";
+
+// Icons
+// import { FaRegUserCircle } from "react-icons/fa";
+
+// Css
 import "../assets/CSS/Navbar.css";
-import Container from "react-bootstrap/Container";
+// import Container from "react-bootstrap/Container";
+
+// Bootstrap
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-import NavDropdown from "react-bootstrap/NavDropdown";
-import { Link } from "react-router-dom";
+// import NavDropdown from "react-bootstrap/NavDropdown";
+
+// Router
+import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <>
       <div>
-        <Navbar className='nav-color' variant='light' expand='lg'>
+        <Navbar className='nav-color' variant='light' expand='lg' sticky='top'>
           <div className='conts'>
             <Navbar.Brand href='/' className='nav-brand'>
               <img src={logo} alt='Logo' />
@@ -20,13 +30,21 @@ function NavBar() {
             <Navbar.Toggle aria-controls='responsive-navbar-nav' />
             <Navbar.Collapse id='responsive-navbar-nav'>
               <Nav className='ms-auto'>
-                <Nav.Link as={Link} to={"/"} className='nav-link'>
+                <Nav.Link
+                  as={NavLink}
+                  to={"/"}
+                  activeclassName='nav-link active'
+                >
                   Home
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/Bantuan"} className='nav-link'>
+                <Nav.Link
+                  as={NavLink}
+                  to={"/Bantuan"}
+                  activeclassName='nav-link active'
+                >
                   Bantuan
                 </Nav.Link>
-                <Nav.Link as={Link} to={"/Login"} className='nav-link login'>
+                <Nav.Link as={NavLink} to={"/Login"} className='nav-link login'>
                   Login
                 </Nav.Link>
               </Nav>

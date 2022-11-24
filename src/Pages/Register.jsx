@@ -8,10 +8,8 @@ import imglogin from "../assets/IMAGE/Login.svg";
 
 // Bootstrap
 import Card from "react-bootstrap/Card";
-import Button from "react-bootstrap/Button";
 import Form from "react-bootstrap/Form";
 import Breadcrumb from "react-bootstrap/Breadcrumb";
-import BreadcrumbItem from "react-bootstrap/esm/BreadcrumbItem";
 
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
@@ -26,7 +24,7 @@ function Register() {
 
         <Card.Body className='Wrap-Login'>
           <Breadcrumb className='i-back'>
-            <Breadcrumb.Item href='/'>
+            <Breadcrumb.Item href='/Login'>
               <FaChevronLeft />
               Kembali
             </Breadcrumb.Item>
@@ -40,9 +38,9 @@ function Register() {
           <Form className='Form'>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
               <Form.Label>Nama Lengkap</Form.Label>
-              <Form.Control type='email' placeholder='Masukan Nama Lengkap' />
+              <Form.Control type='name' placeholder='Masukan Nama Lengkap' />
               <Form.Text className='text-muted'>
-                We'll never share your email with anyone else.
+                Kita Tidak Akan Menyebarkan Informasi Tentang Anda
               </Form.Text>
             </Form.Group>
 
@@ -52,16 +50,19 @@ function Register() {
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Label>Masukan Ulang Password</Form.Label>
-              <Form.Control type='password' placeholder=' Masukan Ulang Password' />
+              <Form.Control
+                type='password'
+                placeholder=' Masukan Ulang Password'
+              />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
-              <Form.Check type='checkbox' label='Remember me' />
+              <Form.Check type='checkbox' label='Ingat Saya' />
             </Form.Group>
-            <div className="sub">
+            <div className='sub'>
               <button>Masuk</button>
-              <a href='/Signup' className='Daftar'>
-              Sudah Punya akun? Masuk
-            </a>
+              <a href='/Login' className='Daftar'>
+                Sudah Punya akun? Masuk
+              </a>
             </div>
           </Form>
         </Card.Body>

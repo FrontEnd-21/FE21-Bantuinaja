@@ -9,11 +9,17 @@
     margin: 0 auto;
     width: 80%;
     position: relative;
-    
 }
+    
+
 
 .ms-auto{
     font-size: 20px;
+}
+
+.ms-auto > .active{
+    color:#003F7E;
+    text-decoration: underline 3px #f27c36;
 }
 
 .ms-auto > .nav-link:hover {
@@ -23,6 +29,8 @@
     text-decoration: underline 3px #f27c36;
 }
 
+
+
 .ms-auto .login {
     background-color: #f27c36;
     text-decoration: none;
@@ -30,6 +38,7 @@
     width: 5rem;
     text-align: center;
     border-radius: 15px;
+    
 }
 
 .ms-auto .login:hover{
