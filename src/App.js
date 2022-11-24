@@ -13,6 +13,7 @@ import Bantuan from "./Pages/Bantuan";
 import DetailBantuan from './Pages/DetailBantuan'
 import StatusBantuan from './Pages/StatusBantuan'
 import LengkapiDokumen from './Pages/LengkapiDokumen'
+import Profile from "./Pages/Profile";
 
 function App() {
   const [count, setCount] = useState(0);
@@ -28,6 +29,7 @@ function App() {
         <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
         <Route path='/Login' element={<Login />} />
         <Route path='/Register' element={<Register />}/>
+        <Route path='/Profile' element={<Profile />} />
         <Route path='/StatusBantuan' element={<StatusBantuan />} />
       </Routes>
 

@@ -24,18 +24,19 @@
 }
 
 .ms-auto .login {
-    background-color: #003F7E;
-    color: white;
+    background-color: #f27c36;
+    text-decoration: none;
+    color: #000;
     width: 5rem;
     text-align: center;
     border-radius: 15px;
 }
 
 .ms-auto .login:hover{
-    background-color: #f27c36;
+    background-color: #003F7E;
     transition: 0.2s ;
+    color: #fff;
     text-decoration: none;
-    font-weight: 400;
-    color:black;
+    
 }
 
