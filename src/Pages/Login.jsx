@@ -59,7 +59,7 @@ function Login() {
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
-              <a href='/Signup' className='Daftar'>
+              <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
               </a>
             </div>

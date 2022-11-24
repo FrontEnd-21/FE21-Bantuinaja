@@ -24,7 +24,7 @@ function Register() {
 
         <Card.Body className='Wrap-Login'>
           <Breadcrumb className='i-back'>
-            <Breadcrumb.Item href='/'>
+            <Breadcrumb.Item href='/Login'>
               <FaChevronLeft />
               Kembali
             </Breadcrumb.Item>
@@ -60,7 +60,7 @@ function Register() {
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
-              <a href='/Signup' className='Daftar'>
+              <a href='/Login' className='Daftar'>
                 Sudah Punya akun? Masuk
               </a>
             </div>

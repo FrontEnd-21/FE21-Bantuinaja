@@ -1,18 +1,28 @@
 import React from "react";
+
+// Image
 import logo from "../assets/IMAGE/logo.svg";
+
+// Icons
 // import { FaRegUserCircle } from "react-icons/fa";
+
+// Css
 import "../assets/CSS/Navbar.css";
 // import Container from "react-bootstrap/Container";
+
+// Bootstrap
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
 // import NavDropdown from "react-bootstrap/NavDropdown";
+
+// Router
 import { NavLink } from "react-router-dom";
 
 function NavBar() {
   return (
     <>
       <div>
-        <Navbar className='nav-color' variant='light' expand='lg'>
+        <Navbar className='nav-color' variant='light' expand='lg' sticky='top'>
           <div className='conts'>
             <Navbar.Brand href='/' className='nav-brand'>
               <img src={logo} alt='Logo' />
