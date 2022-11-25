@@ -4,7 +4,7 @@
 }
 
 .Wrap-Footer{
-    background-color: black;
+    background-color: #003F7E;
     display: flex;
     height:min-content
 }
@@ -60,5 +60,6 @@
     position: absolute;
     bottom: 1rem;
     left: 35rem;
+    color: white;
 }
 

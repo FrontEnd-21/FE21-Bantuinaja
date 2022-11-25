@@ -53,14 +53,14 @@ function Login() {
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
               <Form.Check type='checkbox' label='Ingat Saya' />
-              <a href='/' className='forget'>
-                Lupa Password?
-              </a>
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
               <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
+                </a>
+              <a href='/' className='Daftar'>
+                Lupa Password?
               </a>
             </div>
           </Form>

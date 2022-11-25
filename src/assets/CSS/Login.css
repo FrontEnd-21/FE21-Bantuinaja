@@ -13,7 +13,7 @@
 }
 
 .i-back{
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     
 }
 
@@ -28,9 +28,9 @@
 }
 
 .forget{
-    position: absolute;
     right: 55px;
     top: 28.7rem;
+    color: gray;
 }
 
 .Login-btn {
@@ -45,6 +45,8 @@
     color: gray;
     text-decoration: none;
     text-align: center;
+    display:flex;
+    
 }
 .sub {
     display: flex;
