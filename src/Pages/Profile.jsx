@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { Link  } from 'react-router-dom'
 import '../assets/CSS/Profile.css'
 import fto from '../assets/IMAGE/123.png'
 import ds from '../assets/IMAGE/description.svg'
@@ -12,10 +11,12 @@ import KontakPribadi from '../Components/CardProfile/KontakPribadi'
 function Profile() {
     const [show, setShow] = useState(false)
     const [show1, setShow1] = useState(false)
+    
 
     function toggle1() {
         setShow(true)
         setShow1(false)
+        
     } 
     function toggle2() {
         setShow1(true)
@@ -48,13 +49,11 @@ function Profile() {
             <div className="head">
                 <h1>Lihat/Edit Profil</h1>
             </div>
-            <div className="content">
-                <p onClick={toggle1}>Kontak Pribadi</p>
-
-                
-                <p onClick={toggle2}>Data Pribadi</p>
-                
-                
+            <div>
+                <ul className='content'>
+                    <li onClick={toggle1}  className={show ? 'active' : ''}><p >Kontak Pribadi</p></li>
+                    <li onClick={toggle2}  className={show1 ? 'active' : ''}><p>Data Pribadi</p></li>
+                </ul>
             </div>
             <div className="isi-content">
                 { show1 && <DataPribadi />}
