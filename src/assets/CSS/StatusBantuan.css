@@ -22,6 +22,9 @@
     font-size: 12px;
     
 }
+.tentang-bantuan p {
+    text-align: center;
+}
 .ttg {
     
     display: flex;
