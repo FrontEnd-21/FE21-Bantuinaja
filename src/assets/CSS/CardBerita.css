@@ -1,18 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
 .Gray-box{
-  background-image: url(../IMAGE/bg-info.jpg);
+  background-color: #003F7E;
   border-radius: 2px;
 }
 
 .White-box{
   margin: 3rem 8rem ;
   border-radius: 20px;
-  background-color: white;
+  background: rgba(255, 255, 255, 0.56);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(3.7px);
+  -webkit-backdrop-filter: blur(3.7px);
 }
 
 .News-Title{
   text-align: center;
   padding: 20px;
   text-transform: uppercase;
+  color: #ffff;
+  font-weight: bold;
+  font-family: 'poppins', sans-serif;
 }
 
 .Context{
@@ -20,17 +28,20 @@
   text-align: left;
   padding: 10px;
   margin: 0 30px ;
+  color: #ffff;
 }
 
 .Platfrom{
   font-size:  30px;
   float: left;
   margin: 0  5rem 15px;
+  color: #ffff;
 }
 
 .Platfrom span{
   font-weight: 400;
   margin: 3px 0 0 10px;
+  color: #ffff;
 }
 
 
