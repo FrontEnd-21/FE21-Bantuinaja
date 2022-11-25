@@ -6,6 +6,7 @@
 .Wrap-Footer{
     background-color: black;
     display: flex;
+    height:min-content
 }
 
 .Footer-img {
@@ -22,7 +23,7 @@
 
 .Address-Title h3{
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 50px;
     font-weight: medium;
     font-family: 'poppins', sans-serif;
@@ -33,6 +34,7 @@
     margin-right: 30px;
     font-weight: 300;
     line-height: 30px;
+    font-size: 15px;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
