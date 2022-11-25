@@ -13,7 +13,7 @@
 }
 
 .i-back{
-    margin-bottom: 6rem;
+    margin-bottom: 3rem;
     
 }
 
@@ -27,12 +27,6 @@
 
 }
 
-.forget{
-    position: absolute;
-    right: 55px;
-    top: 28.7rem;
-}
-
 .Login-btn {
 
    border-radius: 20px;     
@@ -41,8 +35,12 @@
     margin-bottom: 20px;
 }
 
+
 .Daftar{
+    display:flex;
+    gap: 15px;
     color: gray;
+    justify-content: center;
     text-decoration: none;
     text-align: center;
 }
