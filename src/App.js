@@ -2,7 +2,7 @@ import { useState } from "react";
 import "./App.css";
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation, matchRoutes } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Pages
@@ -18,8 +18,21 @@ import Profile from "./Pages/Profile";
 function App() {
   const [count, setCount] = useState(0);
 
+  const lokasi = useLocation(
+  )
+  console.log(lokasi)
+
+  // function getCurrentPage() {
+  // const location = useLocation()
+  // const [{ route }] = matchRoutes(routes, location)
+
+  // return route.path
+
+  // }
+
   return (
     <>
+    {/* {lokasi?.path !== "/Register" } */}
       <NavBar />
 
       <Routes>

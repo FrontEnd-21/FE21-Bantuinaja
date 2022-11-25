@@ -33,18 +33,18 @@ function NavBar() {
                 <Nav.Link
                   as={NavLink}
                   to={"/"}
-                  activeclassName='nav-link active'
+                  activeclassName='nav-link aktif'
                 >
                   Home
                 </Nav.Link>
                 <Nav.Link
                   as={NavLink}
                   to={"/Bantuan"}
-                  activeclassName='nav-link active'
+                  activeclassName='nav-link aktif'
                 >
                   Bantuan
                 </Nav.Link>
-                <Nav.Link as={NavLink} to={"/Login"} className='nav-link login'>
+                <Nav.Link as={NavLink} to={"/Login"} className='nav-link masuk'>
                   Login
                 </Nav.Link>
               </Nav>
