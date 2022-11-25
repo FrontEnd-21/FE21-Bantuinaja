@@ -25,7 +25,7 @@ const CardAbout = () => {
           <Card.Text className='context'>
             Bantuin Aja adalah platform yang memudahkan pengguna dalam mencari
             informasi mengenai bantuan dari berbagai jenis bantuan yang ada
-            serta memudahkan mitra untuk melakukan validasi serta verivikasi
+            serta memudahkan mitra untuk melakukan validasi serta verifikasi
             data.
           </Card.Text>
         </Card.Body>
