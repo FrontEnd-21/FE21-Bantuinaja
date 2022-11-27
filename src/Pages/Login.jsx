@@ -58,7 +58,7 @@ function Login() {
               <button>Masuk</button>
               <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
-                <a href='/' className='Daftar'>
+                <a href='/' className='Forget'>
                   Lupa Password?
                 </a>
               </a>
