@@ -12,7 +12,7 @@ const Home = () => {
         <CardBerita />
       </div>
 
-      <div className='data'>
+      {/* <div className='data'>
         <DataCompany />
       </div>
 
@@ -26,7 +26,7 @@ const Home = () => {
 
       <div className='contact'>
         <CardContact />
-      </div>
+      </div> */}
     </>
   );
 };
