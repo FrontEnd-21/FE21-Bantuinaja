@@ -1,58 +1,49 @@
 import React from "react";
 
-// Image
-import logo from "../assets/IMAGE/logo.svg";
-
-// Icons
-// import { FaRegUserCircle } from "react-icons/fa";
-
-// Css
-import "../assets/CSS/Navbar.css";
-// import Container from "react-bootstrap/Container";
-
 // Bootstrap
+import Container from "react-bootstrap/Container";
 import Nav from "react-bootstrap/Nav";
 import Navbar from "react-bootstrap/Navbar";
-// import NavDropdown from "react-bootstrap/NavDropdown";
 
-// Router
+// Image Logo
+import logo from "../assets/IMAGE/logo.svg";
+
+// Active NavLink
 import { NavLink } from "react-router-dom";
+
+// Icons
+// // import { FaRegUserCircle } from "react-icons/fa";
+
+// CSS
+import "../assets/CSS/Navbar.css";
 
 function NavBar() {
   return (
-    <>
-      <div>
-        <Navbar className='nav-color' variant='light' expand='lg' sticky='top'>
-          <div className='conts'>
-            <Navbar.Brand href='/' className='nav-brand'>
-              <img src={logo} alt='Logo' />
-            </Navbar.Brand>
-            <Navbar.Toggle aria-controls='responsive-navbar-nav' />
-            <Navbar.Collapse id='responsive-navbar-nav'>
-              <Nav className='ms-auto'>
-                <Nav.Link
-                  as={NavLink}
-                  to={"/"}
-                  activeclassName='nav-link aktif'
-                >
-                  Home
-                </Nav.Link>
-                <Nav.Link
-                  as={NavLink}
-                  to={"/Bantuan"}
-                  activeclassName='nav-link aktif'
-                >
-                  Bantuan
-                </Nav.Link>
-                <Nav.Link as={NavLink} to={"/Login"} className='nav-link masuk'>
-                  Login
-                </Nav.Link>
-              </Nav>
-            </Navbar.Collapse>
-          </div>
-        </Navbar>
-      </div>
-    </>
+    <Navbar bg='light' expand='lg' sticky='top' className='Navbar'>
+      <Container>
+        <Navbar.Brand href='/'>
+          <img src={logo} alt='Logo' />
+        </Navbar.Brand>
+        <Navbar.Toggle aria-controls='basic-navbar-nav' />
+        <Navbar.Collapse id='basic-navbar-nav'>
+          <Nav className='ms-auto'>
+            <Nav.Link as={NavLink} to={"/"} activeclassName='nav-link active'>
+              Home
+            </Nav.Link>
+            <Nav.Link
+              as={NavLink}
+              to={"/Bantuan"}
+              activeclassName='nav-link active'
+            >
+              Bantuan
+            </Nav.Link>
+            <Nav.Link as={NavLink} to={"/Login"} className='nav-link masuk'>
+              Login{" "}
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
   );
 }
 
