@@ -1,8 +1,14 @@
 import React from "react";
+
+// CSS
 import "../../assets/CSS/formsearch.css";
+
+// Bootstrap
 import Container from "react-bootstrap/Container";
 import Form from "react-bootstrap/Form";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+
+// Router
+import { Link } from "react-router-dom";
 
 const FormSearch = () => {
   return (
@@ -18,12 +24,20 @@ const FormSearch = () => {
         </Form>
       </Container>
 
-      <Breadcrumb className='kategori'>
-        <Breadcrumb.Item href='/DetailBantuan'>Semua</Breadcrumb.Item>
-        <Breadcrumb.Item href='#'>Pendidikan</Breadcrumb.Item>
-        <Breadcrumb.Item href='#'>Sembako</Breadcrumb.Item>
-        <Breadcrumb.Item href='#'>Dana Tunai</Breadcrumb.Item>
-      </Breadcrumb>
+      <Link className='kategori'>
+        <Link to='/DetailBantuan' className='kategori-2'>
+          Semua
+        </Link>
+        <Link to='#' className='kategori-2'>
+          Pendidikan
+        </Link>
+        <Link to='#' className='kategori-2'>
+          Sembako
+        </Link>
+        <Link to='#' className='kategori-2'>
+          Dana Tunai
+        </Link>
+      </Link>
     </div>
   );
 };
