@@ -1,25 +1,18 @@
-.nav-color {
+.Navbar {
     background: #f8f8f8;
-    height: 100px;
+    height: 90px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    opacity: 0.9;
 }
 
-.conts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
-    position: relative;
-}
 
 .ms-auto{
     font-size: 20px;
 }
 
 .ms-auto > .active{
-    color: #003F7E;
+    text-decoration: #003F7E;
     text-decoration: underline 3px #f27c36;
-
 }
 
 .ms-auto > .nav-link:hover {
@@ -39,7 +32,7 @@
     margin-top: 5px;
     margin-left: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 9px;
     
 }
 

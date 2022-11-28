@@ -8,12 +8,37 @@
   
 }
 
+.Contact::before{
+  content: "";
+  background-image: linear-gradient(
+    to right,
+    #003F7E,
+    #003F7E,
+    rgba(0, 0, 0, 0.082)
+  );
+  position: absolute;
+ border-radius: 10px 0 0 10px;
+  height: 300px;
+  top: 0;
+  right: 20px;
+  bottom: 0;
+  left:0;
+  z-index: 1;
+}
+
+.bg-card2{
+  width: auto;
+  height: 300px;
+}
+
+
 .Wrap-Contact {
   padding: 3rem 5rem 3rem;
+  z-index: 2;
 }
 
 .Contact-Title {
-  color: #f5f5f5;
+  color: #fff
 }
 
 .C-btn {
@@ -24,11 +49,11 @@
 .C-img {
   position: absolute;
   right: 1px;
-  width: 500px;
+  width: 700px;
   height: 300px;
   background-color:white;
   border: 1px solid #000000;
-  border-radius: 50px 10px 10px 50px;
+  border-radius: 0 10px 10px 0 ;
 }
 
 .C-img img{
