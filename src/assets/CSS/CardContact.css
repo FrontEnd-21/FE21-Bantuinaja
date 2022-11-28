@@ -1,8 +1,11 @@
+
 .Contact{ 
   background-color: #003f7e;
-  width: 75rem;
-  margin-left: 4.5rem; 
-  border-radius: 10px;
+  width: 80%;
+
+  margin : 0 auto;  
+  border-radius: 10px ;
+  
 }
 
 .Wrap-Contact {

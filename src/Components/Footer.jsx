@@ -16,7 +16,8 @@ import { BiMailSend } from "react-icons/bi";
 function Footer() {
   return (
     <>
-      <Card className='Footer'>
+      <div className='Footer'>
+        
         <Card.Body className='Wrap-Footer'>
           <Card.Img src={logo} alt='logo' className='Footer-img'></Card.Img>
 
@@ -58,7 +59,7 @@ function Footer() {
             @Copyright 2022 by Bantuin.aja Skilvull
           </Card.Text>
         </Card.Body>
-      </Card>
+      </div>
     </>
   );
 }

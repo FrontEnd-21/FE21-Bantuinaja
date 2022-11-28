@@ -12,6 +12,7 @@ import Card from "react-bootstrap/Card";
 
 const CardContact = () => {
   return (
+    
     <Card className='Contact'>
       <Card.Body className='Wrap-Contact'>
         <Card.Title className='Contact-Title'>
@@ -24,6 +25,7 @@ const CardContact = () => {
         <img src={mitra} alt='' />
       </Card.Body>
     </Card>
+  
   );
 };
 

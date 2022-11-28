@@ -15,6 +15,7 @@ import BreadcrumbItem from "react-bootstrap/esm/BreadcrumbItem";
 
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -58,9 +59,9 @@ function Login() {
               <button>Masuk</button>
               <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
-                <a href='/' className='Daftar'>
+                <Link id="lp" to={"/Register"}>
                   Lupa Password?
-                </a>
+                </Link>
               </a>
             </div>
           </Form>
