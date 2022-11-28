@@ -32,8 +32,8 @@ function App() {
 
   return (
     <>
-    {/* {lokasi?.path !== "/Register" } */}
-      <NavBar />
+    {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <NavBar/>}
+      
 
       <Routes>
         <Route path='/' element={<Home />} />
@@ -46,7 +46,8 @@ function App() {
         <Route path='/StatusBantuan' element={<StatusBantuan />} />
       </Routes>
 
-      <Footer />
+      {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <Footer/>}
+
     </>
   );
 }

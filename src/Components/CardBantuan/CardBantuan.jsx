@@ -87,7 +87,7 @@ const CardBantuan = () => {
       </Card>
 
       <Card className='Stages'>
-        <Card.Title>
+        <Card.Title className='Des-Title'>
           <strong>Tahapan Bantuan</strong>
         </Card.Title>
         <Card.Body>

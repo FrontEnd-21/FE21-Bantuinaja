@@ -27,13 +27,13 @@ function NavBar() {
         <Navbar.Toggle aria-controls='basic-navbar-nav' />
         <Navbar.Collapse id='basic-navbar-nav'>
           <Nav className='ms-auto'>
-            <Nav.Link as={NavLink} to={"/"} activeclassName='nav-link active'>
+            <Nav.Link as={NavLink} to={"/"} activeclassname='nav-link active'>
               Home
             </Nav.Link>
             <Nav.Link
               as={NavLink}
               to={"/Bantuan"}
-              activeclassName='nav-link active'
+              activeclassname='nav-link active'
             >
               Bantuan
             </Nav.Link>
