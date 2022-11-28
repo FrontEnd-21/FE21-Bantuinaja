@@ -17,7 +17,6 @@ function Footer() {
   return (
     <>
       <div className='Footer'>
-        
         <Card.Body className='Wrap-Footer'>
           <Card.Img src={logo} alt='logo' className='Footer-img'></Card.Img>
 
@@ -54,11 +53,10 @@ function Footer() {
               </li>
             </ul>
           </Card.Body>
-
-          <Card.Text className='cp'>
-            @Copyright 2022 by Bantuin.aja Skilvull
-          </Card.Text>
         </Card.Body>
+        <Card.Text className='cp'>
+          @Copyright 2022 by Bantuin.aja Skilvull
+        </Card.Text>
       </div>
     </>
   );

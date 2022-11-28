@@ -1,28 +1,27 @@
 .Footer {
-    margin-top: 5rem;
-    border: 10px solid;
+    margin-top: 7rem;
+    border: 5px solid;
     background-color: black;
+    padding: 30px 30px 10px 30px;
    
 }
 
 .Wrap-Footer{
     background-color: black;
     display: flex;
-    width: 80%;
-    margin: 1px auto;
-    
+    width: 100%;  
 }
 
 .Footer-img {
    max-width: 250px;
-   margin: 70px 10px;
+   margin: 10px 20px;
 }
 
 .Footer-Address {
     display: flex;
     flex-direction: column;
-    margin-top: 2.5rem;
-    margin-right: 1rem ;
+    margin-top: 0.5rem;
+   
 }
 
 .Address-Title h3{
@@ -35,33 +34,31 @@
 
 .Address-Map .map{
     color: white;
-    margin-right: 30px;
     font-weight: 300;
     line-height: 30px;
+    
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .Sosial{
     margin-top: 3rem;
-    margin-right: 5rem ;
+    
 }
 .Sosial ul {
     display: flex;
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    
+    align-items: center;   
 }
 .Sosial ul li {
+    justify-content: space-between;
     font-size: 35px;
-    margin-left: 50px;
+    margin-left: 40px;
     list-style: none;
     color: white;
 } 
 
 .cp{
-    position: absolute;
-    bottom: 1rem;
-    left: 35rem;
+    margin-top: 1.5rem;
+    text-align: center;
 }
 
