@@ -59,11 +59,8 @@ function Login() {
               <button>Masuk</button>
               <a href='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
-<<<<<<< HEAD
-                <Link id="lp" to={"/Register"}>
-=======
-                <a href='/' className='Forget'>
->>>>>>> 024cf6537b16b4d1d439111cc3b9243a5a93578c
+
+                <Link to='/' className='Forget'>
                   Lupa Password?
                 </Link>
               </a>
