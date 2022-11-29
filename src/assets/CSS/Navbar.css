@@ -1,14 +1,8 @@
-<<<<<<< HEAD
-.nav-color {
-    background: #d4d4d4;
-    height: 80px;
-=======
 .Navbar {
     background: #f8f8f8;
     height: 90px;
     box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
     opacity: 0.9;
->>>>>>> 5bea37f59dd98d12a3da03a2fa491c5c358f9973
 }
 
 
