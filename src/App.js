@@ -1,8 +1,13 @@
-import { useState } from "react";
 import "./App.css";
+
+// Footer and Navbar Component 
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
+
+// Router
 import { Routes, Route, useLocation } from "react-router-dom";
+ 
+// Bootstrap 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Pages
@@ -16,8 +21,6 @@ import LengkapiDokumen from './Pages/LengkapiDokumen'
 import Profile from "./Pages/Profile";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const lokasi = useLocation(
   )
   console.log(lokasi)
@@ -30,7 +33,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Bantuan' element={<Bantuan />} />
+        <Route path='/bantuan' element={<Bantuan />} />
         <Route path='/DetailBantuan' element={<DetailBantuan />} />
         <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
         <Route path='/Login' element={<Login />} />
