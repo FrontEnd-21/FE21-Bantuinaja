@@ -7,8 +7,12 @@
 }
 
 .Wrap-Footer{
+<<<<<<< HEAD
     margin: 0 auto;
     background-color: black;
+=======
+    background-color: #003F7E;
+>>>>>>> c28bc83595e361ee09fe8ae83725f3c18f88c188
     display: flex;
     width: 80%;  
 }
@@ -27,7 +31,7 @@
 
 .Address-Title h3{
     color: white;
-    font-size: 30px;
+    font-size: 25px;
     line-height: 50px;
     font-weight: medium;
     font-family: 'poppins', sans-serif;
