@@ -45,6 +45,7 @@
   width: 80%;
   margin: 0 auto;
   display: flex;
+  
   align-items: center;
   justify-content: space-between;
 }
@@ -52,8 +53,7 @@
 .main{
   position: relative;
   width: 30%;
-  height: 50vh;
-  
+  height: 50vh;  
   border-radius: 25px;
   background-color: aqua;
   box-shadow:  0 2px 2px 0 rgba(0,0,0,0.4);

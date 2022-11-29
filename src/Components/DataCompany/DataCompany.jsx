@@ -7,14 +7,21 @@ import { Link } from "react-router-dom";
 function DataCompany() {
 
   
-  const [data, setData] = useState()
-  useEffect(() => {
+  const [data, setData] = useState([]);
+
+  const getApi = () => {
     axios.get('https://be-9.up.railway.app/bantuan/')
     .then((response) => {
-      setData(response.data.data)
+      const allData = response.data.data;
+      setData(allData);
     })
-  }, [0])
-  console.log(data);
+    .catch(error => console.log(`Error ${error}`))
+  }
+
+  useEffect(() => {
+    getApi();
+  }, [1])
+  console.log(data.slice(0,3))
   
   
   return (
@@ -33,8 +40,8 @@ function DataCompany() {
                 <img src={item.image_bantuan} alt='Gambar' className='img' />
 
                 <div className='info'>
-                  <span>{item.nama_bantuan}</span>
-                  <span>{item.description}</span>
+                  <span >{item.nama_bantuan}</span>
+                  <span >{item.description}</span>
                 </div>
               </div>
           )
