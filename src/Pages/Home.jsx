@@ -4,8 +4,17 @@ import CardBerita from "../Components/CardBerita/CardBerita";
 import CardContact from "../Components/CardContact/CardContact";
 import DataCompany from "../Components/DataCompany/DataCompany";
 import CardTahapan from "../Components/CardTahapan/CardTahapan";
+import axios from "axios";
 
 const Home = () => {
+
+function Mount(){
+  axios.get('https://pokeapi.co/api/v2/pokemon/ditto')
+  .then(res => {
+    console.log(res);
+  })
+}
+Mount();
   return (
     <>
       <div className='news'>

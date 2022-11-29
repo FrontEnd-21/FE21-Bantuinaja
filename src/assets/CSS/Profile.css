@@ -36,7 +36,7 @@
     
 }
 .item img {
-    width: 8rem;
+    width: 7rem;
     height: 8rem;
 }
 .item:hover{
@@ -47,7 +47,7 @@
 }
 .menu-samping .item {
     border-bottom: 1px solid;
-    width: 100%;
+    
     padding: 50px;
     cursor: pointer;
 }

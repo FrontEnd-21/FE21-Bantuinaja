@@ -7,9 +7,10 @@
 }
 
 .Wrap-Footer{
+    margin: 0 auto;
     background-color: black;
     display: flex;
-    width: 100%;  
+    width: 80%;  
 }
 
 .Footer-img {
