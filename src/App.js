@@ -28,21 +28,21 @@ function App() {
 
   return (
     <>
-    {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <NavBar/>}
+    {lokasi.pathname === "/register"  || lokasi.pathname === '/login' ?  null : <NavBar/>}
       
 
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/bantuan' element={<Bantuan />} />
-        <Route path='/DetailBantuan' element={<DetailBantuan />} />
-        <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
-        <Route path='/Login' element={<Login />} />
-        <Route path='/Register' element={<Register />}/>
-        <Route path='/Profile' element={<Profile />} />
-        <Route path='/StatusBantuan' element={<StatusBantuan />} />
+        <Route path='/detail_bantuan' element={<DetailBantuan />} />
+        <Route path='/lengkapi_dokumen' element={<LengkapiDokumen />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />}/>
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/status_bantuan' element={<StatusBantuan />} />
       </Routes>
 
-      {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <Footer/>}
+      {lokasi.pathname === "/register"  || lokasi.pathname === '/login' ?  null : <Footer/>}
 
     </>
   );

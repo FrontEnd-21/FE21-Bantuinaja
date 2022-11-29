@@ -25,7 +25,7 @@ const FormSearch = () => {
       </Container>
 
       <Link className='kategori'>
-        <Link to='/DetailBantuan' className='kategori-2'>
+        <Link to='/detail_bantuan' className='kategori-2'>
           Semua
         </Link>
         <Link to='#' className='kategori-2'>

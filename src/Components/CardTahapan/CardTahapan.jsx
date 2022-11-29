@@ -14,9 +14,7 @@ const CardTahapan = () => {
     <>
       <Card className='Tahapan-Card'>
         <Card.Body className='Wrap-Body'>
-          <Card.Title className='h1'>
-            <h1>Tahapan Mendapatkan Bantuan</h1>
-          </Card.Title>
+          <Card.Title className='h1'>Tahapan Mendapatkan Bantuan</Card.Title>
         </Card.Body>
 
         <Card.Body className='Wrap-Step'>
