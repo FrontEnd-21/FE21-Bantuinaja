@@ -25,9 +25,7 @@ const CardContact = () => {
         <Button className='C-btn'>Daftar</Button>
       </Card.Body>
 
-      <Card.Body className='C-img'>
-        <img src={mitra} alt='' />
-      </Card.Body>
+      <Card.Img src={card2} className='C-img' />
     </Card>
   
   );
