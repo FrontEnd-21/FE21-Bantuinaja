@@ -27,15 +27,6 @@
 
 }
 
-<<<<<<< HEAD
-.forget{
-    right: 55px;
-    top: 28.7rem;
-    color: gray;
-}
-
-=======
->>>>>>> 02afbd3c89455e6f8e6729926fae5590e2e8a2c6
 .Login-btn {
 
    border-radius: 20px;     
@@ -53,7 +44,7 @@
     text-decoration: none;
     text-align: center;
     display:flex;
-    
+
 }
 .sub {
     display: flex;
