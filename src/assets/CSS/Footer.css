@@ -7,12 +7,9 @@
 }
 
 .Wrap-Footer{
-<<<<<<< HEAD
     margin: 0 auto;
     background-color: black;
-=======
     background-color: #003F7E;
->>>>>>> c28bc83595e361ee09fe8ae83725f3c18f88c188
     display: flex;
     width: 80%;  
 }

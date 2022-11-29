@@ -2,39 +2,46 @@ import React, { useEffect } from "react";
 import "../../assets/CSS/DataStyle.css";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function DataCompany() {
-  // const [company, Setcompany] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://63746b0408104a9c5f7fbfb1.mockapi.io")
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // });
-
+  
+  const [data, setData] = useState()
+  useEffect(() => {
+    axios.get('https://be-9.up.railway.app/bantuan/')
+    .then((response) => {
+      setData(response.data.data)
+    })
+  }, [0])
+  console.log(data);
+  
+  
   return (
-    <>
+    <div className="Container">
       <div className='section-bantuan'>
         <h3>Bantuan</h3>
-        <span>See More..</span>
+        <div className="righ">
+          <p>See More..</p>
+        </div>
       </div>
 
       <section className='company'>
-        <div className='main'>
-          <img src='' alt='Gambar' className='img' />
+        {data.slice(0,3).map(item => {
+          return (
+              <div className='main'>
+                <img src={item.image_bantuan} alt='Gambar' className='img' />
 
-          <div className='info'>
-            <span>Title</span>
-            <span>Date</span>
-          </div>
-        </div>
+                <div className='info'>
+                  <span>{item.nama_bantuan}</span>
+                  <span>{item.description}</span>
+                </div>
+              </div>
+          )
+        })}
+         
       </section>
-    </>
+    </div>
   );
 }
 
