@@ -25,7 +25,7 @@ function Register() {
         </Card.Body>
 
         <Card.Body className='Wrap-Login'>
-          <Link to='/Login' className='i-back'>
+          <Link to='/login' className='i-back'>
             <FaChevronLeft />
             Kembali
           </Link>
@@ -60,7 +60,7 @@ function Register() {
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
-              <Link to='/Login' className='Daftar'>
+              <Link to='/login' className='Daftar'>
                 Sudah Punya akun? Masuk
               </Link>
             </div>

@@ -1,7 +1,7 @@
 .Footer {
     margin-top: 7rem;
-    border: 5px solid;
-    background-color: black;
+    border: 2px solid;
+    background-color: #003F7E;
     padding: 30px 30px 10px 30px;
    
 }
@@ -62,5 +62,6 @@
 .cp{
     margin-top: 1.5rem;
     text-align: center;
+    color : white;
 }
 

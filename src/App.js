@@ -1,8 +1,13 @@
-import { useState } from "react";
 import "./App.css";
+
+// Footer and Navbar Component 
 import Footer from "./Components/Footer";
 import NavBar from "./Components/NavBar";
+
+// Router
 import { Routes, Route, useLocation } from "react-router-dom";
+ 
+// Bootstrap 
 import "bootstrap/dist/css/bootstrap.min.css";
 
 // Pages
@@ -16,8 +21,6 @@ import LengkapiDokumen from './Pages/LengkapiDokumen'
 import Profile from "./Pages/Profile";
 
 function App() {
-  const [count, setCount] = useState(0);
-
   const lokasi = useLocation(
   )
   console.log(lokasi)
@@ -25,21 +28,21 @@ function App() {
 
   return (
     <>
-    {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <NavBar/>}
+    {lokasi.pathname === "/register"  || lokasi.pathname === '/login' ?  null : <NavBar/>}
       
 
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/Bantuan' element={<Bantuan />} />
-        <Route path='/DetailBantuan' element={<DetailBantuan />} />
-        <Route path='/LengkapiDokumen' element={<LengkapiDokumen />} />
-        <Route path='/Login' element={<Login />} />
-        <Route path='/Register' element={<Register />}/>
-        <Route path='/Profile' element={<Profile />} />
-        <Route path='/StatusBantuan' element={<StatusBantuan />} />
+        <Route path='/bantuan' element={<Bantuan />} />
+        <Route path='/detail_bantuan' element={<DetailBantuan />} />
+        <Route path='/lengkapi_dokumen' element={<LengkapiDokumen />} />
+        <Route path='/login' element={<Login />} />
+        <Route path='/register' element={<Register />}/>
+        <Route path='/profile' element={<Profile />} />
+        <Route path='/status_bantuan' element={<StatusBantuan />} />
       </Routes>
 
-      {lokasi.pathname === "/Register"  || lokasi.pathname === '/Login' ?  null : <Footer/>}
+      {lokasi.pathname === "/register"  || lokasi.pathname === '/login' ?  null : <Footer/>}
 
     </>
   );

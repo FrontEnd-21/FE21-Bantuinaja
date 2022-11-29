@@ -32,12 +32,12 @@ function NavBar() {
             </Nav.Link>
             <Nav.Link
               as={NavLink}
-              to={"/Bantuan"}
+              to={"/bantuan"}
               activeclassname='nav-link active'
             >
               Bantuan
             </Nav.Link>
-            <Nav.Link as={NavLink} to={"/Login"} className='nav-link masuk'>
+            <Nav.Link as={NavLink} to={"/login"} className='nav-link masuk'>
               Login{" "}
             </Nav.Link>
           </Nav>

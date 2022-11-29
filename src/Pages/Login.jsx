@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState } from "react";
+import axios from "axios";
 
 // CSS
 import "../assets/CSS/Login.css";
@@ -14,7 +15,38 @@ import Form from "react-bootstrap/Form";
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
-function Login() {
+const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
+  const handleUserName = (e) => {
+    console.log(e.target.value);
+    setEmail(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    console.log(e.target.value);
+    setPassword(e.target.value);
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form berhasil disubmit");
+    axios
+      .post("https://635401afccce2f8c02013b7d.mockapi.io", {
+        email: email,
+        password: password,
+      })
+
+      .then((response) => {
+        console.log(response.data);
+      })
+
+      .catch((err) => {
+        console.log(err);
+        console.log(err.response);
+      });
+  };
   return (
     <>
       <Card className='Login'>
@@ -34,10 +66,16 @@ function Login() {
             Password
           </Card.Subtitle>
 
-          <Form className='Form'>
+          <Form className='Form' onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
               <Form.Label>Alamat Email</Form.Label>
-              <Form.Control type='email' placeholder='Masukan Email' />
+              <Form.Control
+                type='email'
+                placeholder='Masukan Email'
+                value={email}
+                onChange={handleUserName}
+                required
+              />
               <Form.Text className='text-muted'>
                 Kami Tidak akan menyebarkan Informasi tentang anda.
               </Form.Text>
@@ -45,14 +83,23 @@ function Login() {
 
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Label>Password</Form.Label>
-              <Form.Control type='password' placeholder='Password' />
+              <Form.Control
+                type='password'
+                placeholder='Password'
+                value={password}
+                onChange={handlePassword}
+              />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>
               <Form.Check type='checkbox' label='Ingat Saya' />
             </Form.Group>
             <div className='sub'>
-              <button>Masuk</button>
-              <Link to='/Register' className='Daftar'>
+              {/* <Link to='/' className='button'> */}
+              <button type='submit' value='Login'>
+                Masuk
+              </button>
+              {/* </Link> */}
+              <Link to='/register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
               </Link>
 
@@ -65,6 +112,6 @@ function Login() {
       </Card>
     </>
   );
-}
+};
 
 export default Login;
