@@ -8,13 +8,11 @@ import imglogin from "../assets/IMAGE/Login.svg";
 
 // Bootstrap
 import Card from "react-bootstrap/Card";
-
 import Form from "react-bootstrap/Form";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
-import BreadcrumbItem from "react-bootstrap/esm/BreadcrumbItem";
 
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 function Login() {
   return (
@@ -25,12 +23,10 @@ function Login() {
         </Card.Body>
 
         <Card.Body className='Wrap-Login'>
-          <Breadcrumb className='i-back'>
-            <Breadcrumb.Item href='/'>
-              <FaChevronLeft />
-              Kembali
-            </Breadcrumb.Item>
-          </Breadcrumb>
+          <Link to='/' className='i-back'>
+            <FaChevronLeft />
+            Kembali
+          </Link>
 
           <Card.Title className='Login-Title'>Masuk</Card.Title>
           <Card.Subtitle className='Login-Subtitle'>
@@ -56,12 +52,13 @@ function Login() {
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
-              <a href='/Register' className='Daftar'>
+              <Link to='/Register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
-                <a href='/' className='Daftar'>
-                  Lupa Password?
-                </a>
-              </a>
+              </Link>
+
+              <Link to='/' className='Daftar'>
+                Lupa Password?
+              </Link>
             </div>
           </Form>
         </Card.Body>

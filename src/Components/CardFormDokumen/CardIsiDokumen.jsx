@@ -9,54 +9,53 @@ import "../../assets/CSS/LengkapiDokumen.css";
 
 // Bootstrap
 import Card from "react-bootstrap/Card";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
+
 import Button from "react-bootstrap/Button";
 
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
+
+// Router
+import { Link } from "react-router-dom";
 
 const CardIsiDokumen = () => {
   return (
     <>
       <Card className='Card'>
         <Card.Body className='body'>
-          <Breadcrumb>
-            <Breadcrumb.Item href='/Bantuan'>
-              <FaChevronLeft />
-              Kembali
-            </Breadcrumb.Item>
-          </Breadcrumb>
-          <Card.Img variant='right' src={bantuan} className='Card-img' />
-          <Card.Title className='Title'>
+          <Link to='/Bantuan' className=' i-ld'>
+            <FaChevronLeft />
+            Kembali
+          </Link>
+          <Card.Img variant='right' src={bantuan} className='LD-Img' />
+          <Card.Title className='LD-Title'>
             Bantuan Pedidikan Jenjang S1
           </Card.Title>
-          <Card.Text className='Title2'>
+          <Card.Text className='LD-Sub'>
             Offered BY
             <Card.Img variant='right' src={NUS} className='bob' />
           </Card.Text>
-          <Card.Text className='SubTitle'>Pendidikan</Card.Text>
+          <Card.Text className='LD-Kategori'>Pendidikan</Card.Text>
         </Card.Body>
       </Card>
 
-      <div className='container'>
-        <div className='row'>
-          <div className='col d-flex justify-content-center'>
-            <h2 className='text-center'>LENGKAPI DOKUMEN</h2>
-          </div>
-          <span className='Gray-Line'></span>
-          <p className='txt'>
-            Lengkapi dokumenmu untuk dapat mendaftar pada bantuan yang
-            diinginkan
-          </p>
-        </div>
-      </div>
+      <Card className='LD-Wrap'>
+        <Card.Title className='LD-Title-2'>LENGKAPI DOKUMEN</Card.Title>
+        <span className='Black-Line'></span>
+        <Card.Text className='LD-Context'>
+          Lengkapi dokumenmu untuk dapat mendaftar pada bantuan yang diinginkan
+        </Card.Text>
+      </Card>
 
-      <section className='two'>
-        <div className='file-upload'>
-          <h3>Semua Persyaratan Wajib Dalam Bentuk ZIP</h3>
-          <p>
+      <Card className='LD-Wrap-File'>
+        <Card.Body className='Wrap-File'>
+          <Card.Title className='File-Title'>
+            Kartu Tanda Penduduk <strong>Wajib</strong>
+          </Card.Title>
+          <Card.Text className='File-Sub'>
             Upload File dalam Bentuk Pdf Dengan Bentuk Ukuran Maksimal 5 MB.
-          </p>
+          </Card.Text>
+
           <div className='image-upload-wrap'>
             <input
               className='file-upload-input'
@@ -74,6 +73,7 @@ const CardIsiDokumen = () => {
           >
             Unggah File
           </button>
+
           <div className='file-upload-content'>
             <img className='file-upload-image' src='#' alt='your image' />
             <div className='image-title-wrap'>
@@ -86,17 +86,18 @@ const CardIsiDokumen = () => {
               </button>
             </div>
           </div>
-        </div>
+        </Card.Body>
 
-        <hr className='hr' />
+        <hr className='Gray-Line' />
 
-        <div className='file-upload'>
-          <h3>
+        <Card.Body className='Wrap-File'>
+          <Card.Title className='File-Title'>
             Surat Keterangan Tidak Mampu <strong>Wajib</strong>
-          </h3>
-          <p>
+          </Card.Title>
+          <Card.Text className='File-Sub'>
             Upload File dalam Bentuk Pdf Dengan Bentuk Ukuran Maksimal 5 MB.
-          </p>
+          </Card.Text>
+
           <div className='image-upload-wrap'>
             <input
               className='file-upload-input'
@@ -126,11 +127,11 @@ const CardIsiDokumen = () => {
               </button>
             </div>
           </div>
+        </Card.Body>
+        <div className='sub'>
+          <button>SIMPAN</button>
         </div>
-        <a href='/StatusBantuan'>
-          <Button className='btn2'>Kirim</Button>
-        </a>
-      </section>
+      </Card>
     </>
   );
 };

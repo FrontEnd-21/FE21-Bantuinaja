@@ -4,18 +4,18 @@ import axios from "axios";
 import { useState } from "react";
 
 function DataCompany() {
-  const [company, Setcompany] = useState([]);
+  // const [company, Setcompany] = useState([]);
 
-  useEffect(() => {
-    axios
-      .get("https://63746b0408104a9c5f7fbfb1.mockapi.io")
-      .then((res) => {
-        console.log(res);
-      })
-      .catch((err) => {
-        console.log(err);
-      });
-  });
+  // useEffect(() => {
+  //   axios
+  //     .get("https://63746b0408104a9c5f7fbfb1.mockapi.io")
+  //     .then((res) => {
+  //       console.log(res);
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // });
 
   return (
     <>

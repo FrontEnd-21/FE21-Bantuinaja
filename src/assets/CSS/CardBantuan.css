@@ -74,6 +74,10 @@
     text-align: justify;
 }
 
+.Des-Title{
+    margin-bottom: 20px;
+}
+
 
 
 .body2{
@@ -84,7 +88,7 @@
     max-width: 200px;
     position: absolute;
     right: 12rem;
-    top: 45rem;
+    top: 46rem;
     border-color: white;
     align-items: center;
 }
@@ -92,19 +96,20 @@
 .icons{
     font-size: 70px;
     color: #003F7E;
+    margin-left: 5px;
   
 }
 
 .Itext{
-    margin-top: 10px;
+    margin-top: 5px;
     text-align: center;
 }
 
 .Line{
     background: #F27C36;
     width: 3px;
-    height: 70px;
-    margin-left: 2.1rem;
+    height: 60px;
+    margin-left: 2.4rem;
 }
 
 

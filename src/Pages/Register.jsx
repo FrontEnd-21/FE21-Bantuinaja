@@ -9,10 +9,12 @@ import imglogin from "../assets/IMAGE/Login.svg";
 // Bootstrap
 import Card from "react-bootstrap/Card";
 import Form from "react-bootstrap/Form";
-import Breadcrumb from "react-bootstrap/Breadcrumb";
 
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
+
+// Router
+import { Link } from "react-router-dom";
 
 function Register() {
   return (
@@ -23,12 +25,10 @@ function Register() {
         </Card.Body>
 
         <Card.Body className='Wrap-Login'>
-          <Breadcrumb className='i-back'>
-            <Breadcrumb.Item href='/Login'>
-              <FaChevronLeft />
-              Kembali
-            </Breadcrumb.Item>
-          </Breadcrumb>
+          <Link to='/Login' className='i-back'>
+            <FaChevronLeft />
+            Kembali
+          </Link>
 
           <Card.Title className='Login-Title'>Daftar</Card.Title>
           <Card.Subtitle className='Login-Subtitle'>
@@ -60,9 +60,9 @@ function Register() {
             </Form.Group>
             <div className='sub'>
               <button>Masuk</button>
-              <a href='/Login' className='Daftar'>
+              <Link to='/Login' className='Daftar'>
                 Sudah Punya akun? Masuk
-              </a>
+              </Link>
             </div>
           </Form>
         </Card.Body>

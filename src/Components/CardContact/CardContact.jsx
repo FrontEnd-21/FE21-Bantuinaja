@@ -10,9 +10,14 @@ import Button from "react-bootstrap/Button";
 // Bootstrap
 import Card from "react-bootstrap/Card";
 
+// Images
+import card2 from "../../assets/IMAGE/card2.jpg";
+
 const CardContact = () => {
   return (
+    
     <Card className='Contact'>
+      <span className='img-blur'></span>
       <Card.Body className='Wrap-Contact'>
         <Card.Title className='Contact-Title'>
           <h2>Ingin bergabung menjadi mitra kami</h2>
@@ -20,10 +25,9 @@ const CardContact = () => {
         <Button className='C-btn'>Daftar</Button>
       </Card.Body>
 
-      <Card.Body className='C-img'>
-        <img src={mitra} alt='' />
-      </Card.Body>
+      <Card.Img src={card2} className='C-img' />
     </Card>
+  
   );
 };
 

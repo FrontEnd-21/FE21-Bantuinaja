@@ -10,10 +10,15 @@ import Card from "react-bootstrap/Card";
 import { SlCalender } from "react-icons/sl";
 import { AiOutlineLink } from "react-icons/ai";
 
+// Images
+import card1 from "../../assets/IMAGE/card1.jpg";
+
 const CardBerita = () => {
   return (
     <>
-      <Card className='Gray-box'>
+      <Card>
+        <img src={card1} alt='bg-card' className='Outside-box' />
+        {/* <Card.Img src={card1} alt='bg-card' className='Outside-box' /> */}
         <Card.Body className='White-box'>
           <Card.Title className='News-Title'>
             <h2>Information</h2>

@@ -1,16 +1,16 @@
+<<<<<<< HEAD
 .nav-color {
     background: #d4d4d4;
     height: 80px;
+=======
+.Navbar {
+    background: #f8f8f8;
+    height: 90px;
+    box-shadow: 0 2px 2px 0 rgba(0,0,0,0.3);
+    opacity: 0.9;
+>>>>>>> 5bea37f59dd98d12a3da03a2fa491c5c358f9973
 }
 
-.conts {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-    width: 80%;
-    position: relative;
-}
 
 .ms-auto{
     font-size: 20px;
@@ -19,7 +19,7 @@
 }
 
 .ms-auto > .active{
-    color: #003F7E;
+    text-decoration: #003F7E;
     text-decoration: underline 3px #f27c36;
 }
 
@@ -40,7 +40,7 @@
     margin-top: 5px;
     margin-left: 20px;
     text-align: center;
-    border-radius: 10px;
+    border-radius: 9px;
     
 }
 
