@@ -36,7 +36,7 @@
     
 }
 .item img {
-    width: 8rem;
+    width: 7rem;
     height: 8rem;
 }
 .item:hover{
@@ -47,7 +47,7 @@
 }
 .menu-samping .item {
     border-bottom: 1px solid;
-    width: 100%;
+    
     padding: 50px;
     cursor: pointer;
 }
@@ -76,22 +76,16 @@
 }
 .content {
     
-    justify-content: space-between;
-    
-    cursor: pointer;
-    margin: 1px auto;
-    width: 38%;
-    margin-top: 40px;
-    margin-bottom: 40px;
     display: flex;
     align-items: center;
+    justify-content: space-around;
 }
-.content li{ 
-    list-style: none;
-    margin-left: -30px;
+.content > div{
     padding: 10px;
-    display : inline-block;
-    margin-right: 10px;
+    cursor: pointer; 
+    list-style: none;
+    
+    
 }
 .isi-content{
     width: 80%;
@@ -99,7 +93,7 @@
     
     padding: 10px;
 }
-.content li:hover{
+.content > div:hover{
     background-color: #003F7E;
     border-radius: 10px;
     transition: 0.5s ease-in-out;

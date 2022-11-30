@@ -16,12 +16,12 @@ import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 const Login = () => {
-  const [email, setEmail] = useState("");
+  const [username, setName] = useState("");
   const [password, setPassword] = useState("");
 
   const handleUserName = (e) => {
     console.log(e.target.value);
-    setEmail(e.target.value);
+    setName(e.target.value);
   };
 
   const handlePassword = (e) => {
@@ -33,8 +33,8 @@ const Login = () => {
     e.preventDefault();
     console.log("Form berhasil disubmit");
     axios
-      .post("https://635401afccce2f8c02013b7d.mockapi.io", {
-        email: email,
+      .post("https://be-9.up.railway.app/auth/login", {
+        username: username,
         password: password,
       })
 
@@ -68,11 +68,11 @@ const Login = () => {
 
           <Form className='Form' onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Alamat Email</Form.Label>
+              <Form.Label>Nama Anda</Form.Label>
               <Form.Control
-                type='email'
-                placeholder='Masukan Email'
-                value={email}
+                type='name'
+                placeholder='Masukan Nama Lengkap'
+                value={username}
                 onChange={handleUserName}
                 required
               />
@@ -85,7 +85,7 @@ const Login = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type='password'
-                placeholder='Password'
+                placeholder='Masukan Password'
                 value={password}
                 onChange={handlePassword}
               />
@@ -94,11 +94,11 @@ const Login = () => {
               <Form.Check type='checkbox' label='Ingat Saya' />
             </Form.Group>
             <div className='sub'>
-              {/* <Link to='/' className='button'> */}
-              <button type='submit' value='Login'>
-                Masuk
-              </button>
-              {/* </Link> */}
+              <Link to='/' className='button'>
+                <button type='submit' value='Login'>
+                  Masuk
+                </button>
+              </Link>
               <Link to='/register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
               </Link>

@@ -1,4 +1,6 @@
 import React from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 // CSS
 import "../../assets/CSS/formsearch.css";
@@ -11,6 +13,22 @@ import Form from "react-bootstrap/Form";
 import { Link } from "react-router-dom";
 
 const FormSearch = () => {
+  const [data, setData] = useState([]);
+
+  const getApi = () => {
+    axios.get('https://be-9.up.railway.app/bantuan/')
+    .then((response) => {
+      const allData = response.data.data;
+      setData(allData);
+    })
+    .catch(error => console.log(`Error ${error}`))
+  }
+
+  useEffect(() => {
+    getApi();
+  }, [1])
+  console.log(data.slice(0,3))
+  
   return (
     <div>
       <Container fluid className='FormC'>
@@ -38,6 +56,22 @@ const FormSearch = () => {
           Dana Tunai
         </Link>
       </Link>
+
+      <div className="tampil-data">
+      {data.map(item => {
+          return (
+              <div className='main'>
+                <img src={item.image_bantuan} alt='Gambar' className='img' />
+
+                <div className='info'>
+                  <span >{item.nama_bantuan}</span>
+                  <span >{item.description}</span>
+                </div>
+              </div>
+          )
+        })}
+        
+      </div>
     </div>
   );
 };

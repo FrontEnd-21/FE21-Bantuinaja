@@ -19,6 +19,7 @@ import DetailBantuan from './Pages/DetailBantuan'
 import StatusBantuan from './Pages/StatusBantuan'
 import LengkapiDokumen from './Pages/LengkapiDokumen'
 import Profile from "./Pages/Profile";
+import Admin from './Pages/admin/admin'
 
 function App() {
   const lokasi = useLocation(
@@ -40,6 +41,7 @@ function App() {
         <Route path='/register' element={<Register />}/>
         <Route path='/profile' element={<Profile />} />
         <Route path='/status_bantuan' element={<StatusBantuan />} />
+        <Route path="/admin" element={<Admin/>}/>
       </Routes>
 
       {lokasi.pathname === "/register"  || lokasi.pathname === '/login' ?  null : <Footer/>}

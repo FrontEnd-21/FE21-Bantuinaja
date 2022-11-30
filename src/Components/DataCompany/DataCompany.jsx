@@ -2,39 +2,51 @@ import React, { useEffect } from "react";
 import "../../assets/CSS/DataStyle.css";
 import axios from "axios";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { Card } from "react-bootstrap";
 
 function DataCompany() {
-  // const [company, Setcompany] = useState([]);
+  const [data, setData] = useState([]);
 
-  // useEffect(() => {
-  //   axios
-  //     .get("https://63746b0408104a9c5f7fbfb1.mockapi.io")
-  //     .then((res) => {
-  //       console.log(res);
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // });
+  const getApi = () => {
+    axios
+      .get("https://be-9.up.railway.app/bantuan/")
+      .then((response) => {
+        const allData = response.data.data;
+        setData(allData);
+      })
+      .catch((error) => console.log(`Error ${error}`));
+  };
+
+  useEffect(() => {
+    getApi();
+  }, [1]);
+  console.log(data.slice(0, 3));
 
   return (
-    <>
-      <div className='section-bantuan'>
-        <h3>Bantuan</h3>
-        <span>See More..</span>
-      </div>
+    <Card className='Container'>
+      <Card.Body className='section-bantuan'>
+        <Card.Title className='Bantuan-Title'>Bantuan</Card.Title>
+        <Link to='/bantuan' className='righ'>
+          <Card.Text className='righ'>See More..</Card.Text>
+        </Link>
+      </Card.Body>
 
       <section className='company'>
-        <div className='main'>
-          <img src='' alt='Gambar' className='img' />
+        {data.slice(0, 3).map((item) => {
+          return (
+            <div className='main'>
+              <img src={item.image_bantuan} alt='Gambar' className='img' />
 
-          <div className='info'>
-            <span>Title</span>
-            <span>Date</span>
-          </div>
-        </div>
+              <div className='info'>
+                <span>{item.nama_bantuan}</span>
+                <span>{item.description}</span>
+              </div>
+            </div>
+          );
+        })}
       </section>
-    </>
+    </Card>
   );
 }
 

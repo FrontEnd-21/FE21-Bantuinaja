@@ -1,15 +1,16 @@
 .Footer {
     margin-top: 7rem;
     border: 2px solid;
-    background-color: #003F7E;
+    background-color: black;
     padding: 30px 30px 10px 30px;
    
 }
 
 .Wrap-Footer{
-    background-color: #003F7E;
+    margin: 0 auto;
+    background-color: black;
     display: flex;
-    width: 100%;  
+    width: 80%;  
 }
 
 .Footer-img {
