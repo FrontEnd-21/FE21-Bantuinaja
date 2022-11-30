@@ -1,13 +1,13 @@
 import React from "react";
 
 // Components
-import AdminCRUD from "../../Components/Admin_Components/AdminCRUD";
+import AdminPage from "../../Components/Admin_Components/AdminPage";
 
 const admin = () => {
   return (
     <>
-      <div className='login-adm'>
-        <AdminCRUD />
+      <div className='Admin-Page'>
+        <AdminPage />
       </div>
     </>
   );
