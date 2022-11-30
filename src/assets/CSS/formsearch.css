@@ -24,3 +24,16 @@
     transition: 0.5s;
 
 }
+.tampil-data {
+    width: 80%;
+    margin: 5rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    
+}
+.main{
+    margin-bottom: 3rem;
+    cursor: pointer;
+}

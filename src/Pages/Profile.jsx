@@ -7,6 +7,7 @@ import lock from "../assets/IMAGE/lock.svg";
 import DataPribadi from "../Components/CardProfile/DataPribadi";
 import KontakPribadi from "../Components/CardProfile/KontakPribadi";
 import LengkapiDokumen from "../Components/CardProfile/LengkapiDokumen";
+import { Link } from "react-router-dom";
 
 function Profile() {
   const [showContent, setShowContent] = useState(true)
@@ -24,11 +25,7 @@ function Profile() {
     setShow1(true);
     setShow(false);
   }
-  function toggle3(){
-    setShow2(true)
-    setShowContent(false)
-
-  }
+  
   return (
     <div className='profile'>
       <div className='left'>
@@ -40,14 +37,14 @@ function Profile() {
           </p>
         </div>
         <div className='menu-samping'>
-          <div className='item' onClick={toggle3} >
+          <div className='item'>
             <img src={ds} alt='' id='color' />
             <a href=''>Lengkapi Dokumen</a>
           </div> 
-          <div className='item'>
+          <Link to={"/status_Bantuan"} className='item'>
             <img src={dc} alt='' />
             <a href=''>Status Bantuan</a>
-          </div>
+          </Link>
           <div className='item'>
             <img src={lock} alt='' />
             <a href=''>Reset Password</a>
@@ -57,22 +54,22 @@ function Profile() {
       
       
       <div className='right r-content'>
-      { show2 && <LengkapiDokumen data={showContent} us={setShowContent} />}
+      
       { showContent && 
       <>
           <div className='head'>
             <h1>Lihat/Edit Profil</h1>
           </div>
-          <div>
-            <ul className='content'>
-              <li onClick={toggle1} className={show ? "aktif" : ""}>
+          
+            <div className='content'>
+              <div onClick={toggle1} className={show ? "aktif" : ""}>
                 <p>Kontak Pribadi</p>
-              </li>
-              <li onClick={toggle2} className={show1 ? "aktif" : ""}>
+              </div>
+              <div onClick={toggle2} className={show1 ? "aktif" : ""}>
                 <p>Data Pribadi</p>
-              </li>
-            </ul>
-          </div>
+              </div>
+            </div>
+      
           <div className='isi-content'>
             {show1 && <DataPribadi />}
             {show && <KontakPribadi />}

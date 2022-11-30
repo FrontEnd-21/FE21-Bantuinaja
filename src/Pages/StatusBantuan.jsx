@@ -76,7 +76,7 @@ function StatusBantuan() {
           </Card.Text>
         </Card.Body>
       </Card>
-
+      <div className="box4-5">
       <Card className='Box4'>
         <Card.Text className='Box4-Title'>
           Lengkapi Dokumen Anda Terlebih Dahulu
@@ -97,6 +97,7 @@ function StatusBantuan() {
           KTP, Rapor SMA,TOEFL,Surat Keterangan Sehat,SKTM
         </Card.Text>
       </Card>
+      </div>
     </Card>
   );
 }
