@@ -25,8 +25,8 @@ function Profile() {
         <div className='card-foto'>
           <img src={fto} alt='' />
           <p>
-            Asep Supardi <br />
-            20 Tahun
+            Soe hard to <br />
+            30 Tahun
           </p>
         </div>
         <div className='menu-samping'>

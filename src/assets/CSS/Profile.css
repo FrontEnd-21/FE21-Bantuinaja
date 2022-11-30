@@ -90,6 +90,8 @@
     list-style: none;
     margin-left: -30px;
     padding: 10px;
+    display : inline-block;
+    margin-right: 10px;
 }
 .isi-content{
     width: 80%;
