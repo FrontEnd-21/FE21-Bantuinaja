@@ -1,14 +1,14 @@
 .Footer {
     margin-top: 7rem;
     border: 2px solid;
-    background-color: black;
+    background-color: #003F7E;
     padding: 30px 30px 10px 30px;
    
 }
 
 .Wrap-Footer{
     margin: 0 auto;
-    background-color: black;
+    background-color: #003F7E;
     display: flex;
     width: 80%;  
 }
