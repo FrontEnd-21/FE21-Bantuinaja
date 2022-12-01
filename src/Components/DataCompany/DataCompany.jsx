@@ -29,7 +29,7 @@ function DataCompany() {
       <div className='section-bantuan'>
         <h3>Bantuan</h3>
         <div className="righ">
-          <p>See More..</p>
+          <Link to={"/bantuan"}>See More..</Link>
         </div>
       </div>
 

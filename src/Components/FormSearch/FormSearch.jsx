@@ -23,7 +23,7 @@ const FormSearch = () => {
     })
     .catch(error => console.log(`Error ${error}`))
   }
-
+  
   useEffect(() => {
     getApi();
   }, [1])
@@ -38,6 +38,7 @@ const FormSearch = () => {
             placeholder='Search'
             className='me-2'
             aria-label='Search'
+          
           />
         </Form>
       </Container>
