@@ -20,12 +20,8 @@ import axios from "axios";
 
 
 const Login = () => {
-<<<<<<< HEAD
-  const [username, setName] = useState("");
-=======
   
   const [email, setEmail] = useState("");
->>>>>>> 0c33d94dfa04e056a49d18309e84469bbe068775
   const [password, setPassword] = useState("");
   const [success , setSuccess] = useState(false);
 
@@ -41,14 +37,6 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-<<<<<<< HEAD
-    console.log("Form berhasil disubmit");
-    axios
-      .post("https://be-9.up.railway.app/auth/login", {
-        username: username,
-        password: password,
-      })
-=======
     axios.post('https://be-9.up.railway.app/auth/login', {
       username : email, 
       password : password
@@ -60,7 +48,6 @@ const Login = () => {
     }).catch(error => {
       console.log(error)
     })
->>>>>>> 0c33d94dfa04e056a49d18309e84469bbe068775
 
     if(success === 200){
       setSuccess(true)
@@ -101,11 +88,7 @@ const Login = () => {
               <Form.Control
                 type='name'
                 placeholder='Masukan Nama Lengkap'
-<<<<<<< HEAD
-                value={username}
-=======
                 value={email}
->>>>>>> 0c33d94dfa04e056a49d18309e84469bbe068775
                 onChange={handleUserName}
                 required
               />
