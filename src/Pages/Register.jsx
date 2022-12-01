@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 // CSS
 import "../assets/CSS/Login.css";
@@ -15,8 +15,45 @@ import { FaChevronLeft } from "react-icons/fa";
 
 // Router
 import { Link } from "react-router-dom";
+import axios from "axios";
 
 function Register() {
+  const [username , setUsername] = useState()
+  const [password, setPassword] = useState()
+  const [role, setRole] = useState()
+
+  
+  const handleUserName = (e) => {
+    console.log(e.target.value);
+    setUsername(e.target.value);
+  };
+
+  const handlePassword = (e) => {
+    console.log(e.target.value);
+    setPassword(e.target.value);
+  };
+  
+  const handleRole = (e) => {
+    console.log(e.target.value);
+    setRole(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    axios.post('https://be-9.up.railway.app/auth/register', {
+      username : username, 
+      password : password,
+      role : role
+
+    })
+    .then(response => {
+      console.log(response.data);
+      
+      
+    }).catch(error => {
+      console.log(error)
+    })
+  }
+
   return (
     <>
       <Card className='Login'>
@@ -35,10 +72,10 @@ function Register() {
             Daftar Akun terlebih dahulu agar bisa lanjut
           </Card.Subtitle>
 
-          <Form className='Form'>
+          <Form className='Form' onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Nama Lengkap</Form.Label>
-              <Form.Control type='name' placeholder='Masukan Nama Lengkap' />
+              <Form.Label>Username</Form.Label>
+              <Form.Control type='text' placeholder='Masukan Nama Lengkap' onChange={handleUserName} />
               <Form.Text className='text-muted'>
                 Kita Tidak Akan Menyebarkan Informasi Tentang Anda
               </Form.Text>
@@ -46,13 +83,14 @@ function Register() {
 
             <Form.Group className='mb-3' controlId='formBasicPassword'>
               <Form.Label>Password</Form.Label>
-              <Form.Control type='password' placeholder='Password' />
+              <Form.Control type='Password' placeholder='Password' onChange={handlePassword} />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicPassword'>
-              <Form.Label>Masukan Ulang Password</Form.Label>
+              <Form.Label>Role</Form.Label>
               <Form.Control
-                type='password'
-                placeholder=' Masukan Ulang Password'
+                type='text'
+                placeholder='Role'
+                onChange={handleRole}
               />
             </Form.Group>
             <Form.Group className='mb-3' controlId='formBasicCheckbox'>

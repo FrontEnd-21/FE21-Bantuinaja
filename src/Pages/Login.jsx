@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useContext, useState } from "react";
+
 
 // CSS
 import "../assets/CSS/Login.css";
@@ -14,10 +14,16 @@ import Form from "react-bootstrap/Form";
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Home from "./Home";
+import axios from "axios";
+
+
 
 const Login = () => {
+  
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
+  const [success , setSuccess] = useState(false);
 
   const handleUserName = (e) => {
     console.log(e.target.value);
@@ -31,24 +37,38 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form berhasil disubmit");
-    axios
-      .post("https://635401afccce2f8c02013b7d.mockapi.io", {
-        email: email,
-        password: password,
-      })
+    axios.post('https://be-9.up.railway.app/auth/login', {
+      username : email, 
+      password : password
+    })
+    .then(response => {
+      console.log(response.data.status);
+      setSuccess(response.data.status)
+      
+    }).catch(error => {
+      console.log(error)
+    })
 
-      .then((response) => {
-        console.log(response.data);
-      })
-
-      .catch((err) => {
-        console.log(err);
-        console.log(err.response);
-      });
-  };
+    if(success === 200){
+      setSuccess(true)
+      console.log(success)
+      alert('berhasil')
+    } else {
+      alert('Gagal Username dan Password Salah')
+    }
+    
+    
+  }
   return (
     <>
+    { success ? (
+      <section>
+        <h1>Berhasil Login</h1>
+        <Link to={"/"}>
+        Home
+        </Link>
+      </section>
+    ) : (
       <Card className='Login'>
         <Card.Body className='Wrap-Login'>
           <Card.Img src={imglogin} alt='' className='Img'></Card.Img>
@@ -70,7 +90,7 @@ const Login = () => {
             <Form.Group className='mb-3' controlId='formBasicEmail'>
               <Form.Label>Alamat Email</Form.Label>
               <Form.Control
-                type='email'
+                type='text'
                 placeholder='Masukan Email'
                 value={email}
                 onChange={handleUserName}
@@ -110,6 +130,7 @@ const Login = () => {
           </Form>
         </Card.Body>
       </Card>
+    )}
     </>
   );
 };
