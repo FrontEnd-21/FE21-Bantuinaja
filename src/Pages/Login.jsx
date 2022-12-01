@@ -51,11 +51,7 @@ const Login = () => {
 
     if(success === 200){
       setSuccess(true)
-      console.log(success)
-      alert('berhasil')
-    } else {
-      alert('Gagal Username dan Password Salah')
-    }
+    } 
     
     
   }
