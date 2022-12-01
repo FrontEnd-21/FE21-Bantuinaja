@@ -12,11 +12,13 @@ function DataCompany() {
     axios
       .get("https://be-9.up.railway.app/bantuan/")
       .then((response) => {
+      
         const allData = response.data.data;
         setData(allData);
       })
       .catch((error) => console.log(`Error ${error}`));
   };
+  
 
   useEffect(() => {
     getApi();
@@ -24,15 +26,6 @@ function DataCompany() {
   console.log(data.slice(0, 3));
 
   return (
-<<<<<<< HEAD
-    <div className="Container">
-      <div className='section-bantuan'>
-        <h3>Bantuan</h3>
-        <div className="righ">
-          <Link to={"/bantuan"}>See More..</Link>
-        </div>
-      </div>
-=======
     <Card className='Container'>
       <Card.Body className='section-bantuan'>
         <Card.Title className='Bantuan-Title'>Bantuan</Card.Title>
@@ -40,7 +33,6 @@ function DataCompany() {
           <Card.Text className='righ'>See More..</Card.Text>
         </Link>
       </Card.Body>
->>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
 
       <section className='company'>
         {data.slice(0, 3).map((item) => {
