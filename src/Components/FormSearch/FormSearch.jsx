@@ -23,7 +23,10 @@ const FormSearch = () => {
     })
     .catch(error => console.log(`Error ${error}`))
   }
+<<<<<<< HEAD
   
+=======
+>>>>>>> e2ad33eb0e660cc4e565eca812672fbca094ddba
   useEffect(() => {
     getApi();
   }, [1])

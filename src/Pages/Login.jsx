@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import axios from "axios";
+import React, { useContext, useState } from "react";
+
 
 // CSS
 import "../assets/CSS/Login.css";
@@ -14,14 +14,24 @@ import Form from "react-bootstrap/Form";
 // Icons
 import { FaChevronLeft } from "react-icons/fa";
 import { Link } from "react-router-dom";
+import Home from "./Home";
+import axios from "axios";
+
+
 
 const Login = () => {
+<<<<<<< HEAD
+  
   const [email, setEmail] = useState("");
+=======
+  const [username, setName] = useState("");
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
   const [password, setPassword] = useState("");
+  const [success , setSuccess] = useState(false);
 
   const handleUserName = (e) => {
     console.log(e.target.value);
-    setEmail(e.target.value);
+    setName(e.target.value);
   };
 
   const handlePassword = (e) => {
@@ -31,24 +41,43 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
+    axios.post('https://be-9.up.railway.app/auth/login', {
+      username : email, 
+      password : password
+    })
+    .then(response => {
+      console.log(response.data.status);
+      setSuccess(response.data.status)
+      
+    }).catch(error => {
+      console.log(error)
+    })
+=======
     console.log("Form berhasil disubmit");
     axios
-      .post("https://635401afccce2f8c02013b7d.mockapi.io", {
-        email: email,
+      .post("https://be-9.up.railway.app/auth/login", {
+        username: username,
         password: password,
       })
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
 
-      .then((response) => {
-        console.log(response.data);
-      })
-
-      .catch((err) => {
-        console.log(err);
-        console.log(err.response);
-      });
-  };
+    if(success === 200){
+      setSuccess(true)
+    } 
+    
+    
+  }
   return (
     <>
+    { success ? (
+      <section>
+        <h1>Berhasil Login</h1>
+        <Link to={"/"}>
+        Home
+        </Link>
+      </section>
+    ) : (
       <Card className='Login'>
         <Card.Body className='Wrap-Login'>
           <Card.Img src={imglogin} alt='' className='Img'></Card.Img>
@@ -68,11 +97,17 @@ const Login = () => {
 
           <Form className='Form' onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Alamat Email</Form.Label>
+              <Form.Label>Nama Anda</Form.Label>
               <Form.Control
-                type='email'
+<<<<<<< HEAD
+                type='text'
                 placeholder='Masukan Email'
                 value={email}
+=======
+                type='name'
+                placeholder='Masukan Nama Lengkap'
+                value={username}
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
                 onChange={handleUserName}
                 required
               />
@@ -85,7 +120,7 @@ const Login = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type='password'
-                placeholder='Password'
+                placeholder='Masukan Password'
                 value={password}
                 onChange={handlePassword}
               />
@@ -94,11 +129,11 @@ const Login = () => {
               <Form.Check type='checkbox' label='Ingat Saya' />
             </Form.Group>
             <div className='sub'>
-              {/* <Link to='/' className='button'> */}
-              <button type='submit' value='Login'>
-                Masuk
-              </button>
-              {/* </Link> */}
+              <Link to='/' className='button'>
+                <button type='submit' value='Login'>
+                  Masuk
+                </button>
+              </Link>
               <Link to='/register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
               </Link>
@@ -110,6 +145,7 @@ const Login = () => {
           </Form>
         </Card.Body>
       </Card>
+    )}
     </>
   );
 };
