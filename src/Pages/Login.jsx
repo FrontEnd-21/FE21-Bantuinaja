@@ -20,14 +20,18 @@ import axios from "axios";
 
 
 const Login = () => {
+<<<<<<< HEAD
   
   const [email, setEmail] = useState("");
+=======
+  const [username, setName] = useState("");
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
   const [password, setPassword] = useState("");
   const [success , setSuccess] = useState(false);
 
   const handleUserName = (e) => {
     console.log(e.target.value);
-    setEmail(e.target.value);
+    setName(e.target.value);
   };
 
   const handlePassword = (e) => {
@@ -37,6 +41,7 @@ const Login = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+<<<<<<< HEAD
     axios.post('https://be-9.up.railway.app/auth/login', {
       username : email, 
       password : password
@@ -48,6 +53,14 @@ const Login = () => {
     }).catch(error => {
       console.log(error)
     })
+=======
+    console.log("Form berhasil disubmit");
+    axios
+      .post("https://be-9.up.railway.app/auth/login", {
+        username: username,
+        password: password,
+      })
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
 
     if(success === 200){
       setSuccess(true)
@@ -84,11 +97,17 @@ const Login = () => {
 
           <Form className='Form' onSubmit={handleSubmit}>
             <Form.Group className='mb-3' controlId='formBasicEmail'>
-              <Form.Label>Alamat Email</Form.Label>
+              <Form.Label>Nama Anda</Form.Label>
               <Form.Control
+<<<<<<< HEAD
                 type='text'
                 placeholder='Masukan Email'
                 value={email}
+=======
+                type='name'
+                placeholder='Masukan Nama Lengkap'
+                value={username}
+>>>>>>> 2ec2fd42616b25fffffd7346f5ff9f5082b65f77
                 onChange={handleUserName}
                 required
               />
@@ -101,7 +120,7 @@ const Login = () => {
               <Form.Label>Password</Form.Label>
               <Form.Control
                 type='password'
-                placeholder='Password'
+                placeholder='Masukan Password'
                 value={password}
                 onChange={handlePassword}
               />
@@ -110,11 +129,11 @@ const Login = () => {
               <Form.Check type='checkbox' label='Ingat Saya' />
             </Form.Group>
             <div className='sub'>
-              {/* <Link to='/' className='button'> */}
-              <button type='submit' value='Login'>
-                Masuk
-              </button>
-              {/* </Link> */}
+              <Link to='/' className='button'>
+                <button type='submit' value='Login'>
+                  Masuk
+                </button>
+              </Link>
               <Link to='/register' className='Daftar'>
                 Belum Memiliki Akun? Daftar
               </Link>

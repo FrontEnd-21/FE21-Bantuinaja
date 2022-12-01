@@ -18,6 +18,7 @@ import { FaRegFileAlt } from "react-icons/fa";
 import { FaRegCheckCircle } from "react-icons/fa";
 import { MdOutlineTimelapse } from "react-icons/md";
 import { MdOutlineDocumentScanner } from "react-icons/md";
+import { Link } from "react-router-dom";
 
 const CardBantuan = () => {
   return (
@@ -38,9 +39,9 @@ const CardBantuan = () => {
             <MdOutlineTimelapse />
             12 Desember 2022
           </Card.Text>
-          <a href='/Login'>
+          <Link href='/Login'>
             <Button className='btn'>Apply</Button>
-          </a>
+          </Link>
 
           <Card.Img variant='right' src={bantuan} className='bimg' />
           <Card.Text className='btxt'>
