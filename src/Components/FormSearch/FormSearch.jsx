@@ -11,9 +11,12 @@ import Form from "react-bootstrap/Form";
 
 // Router
 import { Link } from "react-router-dom";
+import CardBantuan from "../CardBantuan/CardBantuan";
 
 const FormSearch = () => {
   const [data, setData] = useState([]);
+  const [id, setId] = useState();
+  const [show, setShow] = useState(false)
 
   const getApi = () => {
     axios.get('https://be-9.up.railway.app/bantuan/')
@@ -23,13 +26,25 @@ const FormSearch = () => {
     })
     .catch(error => console.log(`Error ${error}`))
   }
+
+  function handleClick(e){
+    console.log(e.currentTarget.getAttribute('data-id'))
+    setId(e.currentTarget.getAttribute('data-id'))
+    setShow(true)
+  }
+  
   useEffect(() => {
     getApi();
   }, [1])
   console.log(data.slice(0,3))
   
   return (
+
     <div>
+      { show ? (
+        <CardBantuan dt={id} />
+      ) : (
+        <>
       <Container fluid className='FormC'>
         <Form className='d-flex'>
           <Form.Control
@@ -37,7 +52,6 @@ const FormSearch = () => {
             placeholder='Search'
             className='me-2'
             aria-label='Search'
-          
           />
         </Form>
       </Container>
@@ -57,10 +71,10 @@ const FormSearch = () => {
         </Link>
       </Link>
 
-      <div className="tampil-data">
-      {data.map(item => {
+      <div className="tampil-data"  >
+      {data.map((item, index) => {
           return (
-              <div className='main'>
+              <div key={index} className='main' onClick={handleClick} data-id={item._id} >
                 <img src={item.image_bantuan} alt='Gambar' className='img' />
 
                 <div className='info'>
@@ -72,7 +86,10 @@ const FormSearch = () => {
         })}
         
       </div>
+      </>
+      )};
     </div>
+   
   );
 };
 

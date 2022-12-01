@@ -12,11 +12,13 @@ function DataCompany() {
     axios
       .get("https://be-9.up.railway.app/bantuan/")
       .then((response) => {
+      
         const allData = response.data.data;
         setData(allData);
       })
       .catch((error) => console.log(`Error ${error}`));
   };
+  
 
   useEffect(() => {
     getApi();
